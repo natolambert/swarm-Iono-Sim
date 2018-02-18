@@ -13,7 +13,7 @@ N_to_uN = 1e6; %convert newtons to millnewtons
 % varList = Simulink.findVars(model, 'WorkspaceType', 'base')
 % Simulink.saveVars('ionocraft_drag_data.m','ModelParam')
 
-sim('iros2018_AoA.slx');
+sim('iros2018_control.slx');
 
 state_vector.Data(abs(state_vector.Data) < 1e-5) = 0; %get rid of anything less than 10um, 10um/s, 10urad, 10urad/s
 thrust_and_torque_inputs.Data(abs(thrust_and_torque_inputs.Data) < 1e-9) = 0; %get rid of anything less than 1nN or 100nN*cm

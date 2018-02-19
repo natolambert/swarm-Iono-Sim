@@ -45,7 +45,7 @@ input_equil = [quad.g*quad.M/cos(angle) ;0 ;0 ;0];                %u_eq
 equil       = [state_equil; input_equil];
 
 % Hard codes desired states to try
-state_des = [0; 0; .15 ; 0; .00; .00; 0; 0; 0; 0; 0; 0]; %x_eq
+state_des = [0; 0; .07 ; 0; .00; .00; 0; 0; 0; 0; 0; 0]; %x_eq
 % NOTE: The system will not converge with a nonzero roll or pitch desired
 % state. Have not tested angular or linear velocities. For now, desired
 % state sould be a vector of the form [X,Y,Z,YAW] with 0's appended as need

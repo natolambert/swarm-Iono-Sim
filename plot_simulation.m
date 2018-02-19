@@ -109,25 +109,25 @@ if video_flag == 1          % Should change it so only displays to flag is on, a
         y_vec_global_neg_offset_2_head = quiver3(X(i)*m_to_cm + x_vec_global_neg(1),Y(i)*m_to_cm + x_vec_global_neg(2),Z(i)*m_to_cm + x_vec_global_neg(3),y_vec_global_neg(1),y_vec_global_neg(2),y_vec_global_neg(3),'ShowArrowHead','Off','Color','b');
 
         
-        %% Shadow
-        
-        %plot four main ionocraft length vectors projected onto the xy plane of the global frame
-        x_vec_global_pos_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,x_vec_global_pos(1),x_vec_global_pos(2),0,'ShowArrowHead','Off','Color','r');
-        x_vec_global_neg_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,x_vec_global_neg(1),x_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
-        y_vec_global_pos_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,y_vec_global_pos(1),y_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
-        y_vec_global_neg_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,y_vec_global_neg(1),y_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
-
-        %plot four offset x body frame vectors in the xy plane of the global frame
-        x_vec_global_pos_xy_offset_1_head = quiver3(X(i)*m_to_cm + y_vec_global_pos(1),Y(i)*m_to_cm + y_vec_global_pos(2),0,x_vec_global_pos(1),x_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
-        x_vec_global_pos_xy_offset_2_head = quiver3(X(i)*m_to_cm + y_vec_global_neg(1),Y(i)*m_to_cm + y_vec_global_neg(2),0,x_vec_global_pos(1),x_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
-        x_vec_global_neg_xy_offset_1_head = quiver3(X(i)*m_to_cm + y_vec_global_pos(1),Y(i)*m_to_cm + y_vec_global_pos(2),0,x_vec_global_neg(1),x_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
-        x_vec_global_neg_xy_offset_2_head = quiver3(X(i)*m_to_cm + y_vec_global_neg(1),Y(i)*m_to_cm + y_vec_global_neg(2),0,x_vec_global_neg(1),x_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
-
-        %plot four offset y body frame vectors in the xy plane of the global frame
-        y_vec_global_pos_xy_offset_1_head = quiver3(X(i)*m_to_cm + x_vec_global_pos(1),Y(i)*m_to_cm + x_vec_global_pos(2),0,y_vec_global_pos(1),y_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
-        y_vec_global_pos_xy_offset_2_head = quiver3(X(i)*m_to_cm + x_vec_global_neg(1),Y(i)*m_to_cm + x_vec_global_neg(2),0,y_vec_global_pos(1),y_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
-        y_vec_global_neg_xy_offset_1_head = quiver3(X(i)*m_to_cm + x_vec_global_pos(1),Y(i)*m_to_cm + x_vec_global_pos(2),0,y_vec_global_neg(1),y_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
-        y_vec_global_neg_xy_offset_2_head = quiver3(X(i)*m_to_cm + x_vec_global_neg(1),Y(i)*m_to_cm + x_vec_global_neg(2),0,y_vec_global_neg(1),y_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
+%         %% Shadow
+%         
+%         %plot four main ionocraft length vectors projected onto the xy plane of the global frame
+%         x_vec_global_pos_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,x_vec_global_pos(1),x_vec_global_pos(2),0,'ShowArrowHead','Off','Color','r');
+%         x_vec_global_neg_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,x_vec_global_neg(1),x_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
+%         y_vec_global_pos_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,y_vec_global_pos(1),y_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
+%         y_vec_global_neg_xy_head = quiver3(X(i)*m_to_cm,Y(i)*m_to_cm,0,y_vec_global_neg(1),y_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
+% 
+%         %plot four offset x body frame vectors in the xy plane of the global frame
+%         x_vec_global_pos_xy_offset_1_head = quiver3(X(i)*m_to_cm + y_vec_global_pos(1),Y(i)*m_to_cm + y_vec_global_pos(2),0,x_vec_global_pos(1),x_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
+%         x_vec_global_pos_xy_offset_2_head = quiver3(X(i)*m_to_cm + y_vec_global_neg(1),Y(i)*m_to_cm + y_vec_global_neg(2),0,x_vec_global_pos(1),x_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
+%         x_vec_global_neg_xy_offset_1_head = quiver3(X(i)*m_to_cm + y_vec_global_pos(1),Y(i)*m_to_cm + y_vec_global_pos(2),0,x_vec_global_neg(1),x_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
+%         x_vec_global_neg_xy_offset_2_head = quiver3(X(i)*m_to_cm + y_vec_global_neg(1),Y(i)*m_to_cm + y_vec_global_neg(2),0,x_vec_global_neg(1),x_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
+% 
+%         %plot four offset y body frame vectors in the xy plane of the global frame
+%         y_vec_global_pos_xy_offset_1_head = quiver3(X(i)*m_to_cm + x_vec_global_pos(1),Y(i)*m_to_cm + x_vec_global_pos(2),0,y_vec_global_pos(1),y_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
+%         y_vec_global_pos_xy_offset_2_head = quiver3(X(i)*m_to_cm + x_vec_global_neg(1),Y(i)*m_to_cm + x_vec_global_neg(2),0,y_vec_global_pos(1),y_vec_global_pos(2),0,'ShowArrowHead','Off','Color','k');
+%         y_vec_global_neg_xy_offset_1_head = quiver3(X(i)*m_to_cm + x_vec_global_pos(1),Y(i)*m_to_cm + x_vec_global_pos(2),0,y_vec_global_neg(1),y_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
+%         y_vec_global_neg_xy_offset_2_head = quiver3(X(i)*m_to_cm + x_vec_global_neg(1),Y(i)*m_to_cm + x_vec_global_neg(2),0,y_vec_global_neg(1),y_vec_global_neg(2),0,'ShowArrowHead','Off','Color','k');
 
         %% Insert zoomed here
         

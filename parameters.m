@@ -206,14 +206,14 @@ M_pitch = -1*[1,1,-1,-1]';
 % view_1 = 15;            %viewing angle for 3D quiver plot, first parameter
 % view_2 = 46;            %viewing angle for 3D quiver plot, second parameter
 
-x_lim = [-10 10];       %[cm], x axis in 3D quiver plot
-y_lim = [-10 10];       %[cm], y axis in 3D quiver plot
-z_lim = [0 13];         %[cm], z axis in 3D quiver plot
+x_lim = [-10 30];       %[cm], x axis in 3D quiver plot
+y_lim = [-30 10];       %[cm], y axis in 3D quiver plot
+z_lim = [-5 5];         %[cm], z axis in 3D quiver plot
 view_1 = 15;            %viewing angle for 3D quiver plot, first parameter
 view_2 = 46;            %viewing angle for 3D quiver plot, second parameter
 
 
-video_frame_frequency = 33; % how many frame jumps per frame that is recorded in video 66 = 60fps
+video_frame_frequency = 330; % how many frame jumps per frame that is recorded in video 66 = 60fps
 sim_time = 1;          %[s], how long the simulation runs 
 video_flag = 0;         % set to 1 to record video, set to 0 otherwise
 

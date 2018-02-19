@@ -20,9 +20,10 @@ phi = state_vector.Data(:,6);       % Roll
 
 subplot(4,4,[1 2 5 6 9 10 13 14])
 
-x_lim = [-5 5];       %[cm], x axis in 3D quiver plot
-y_lim = [-5 5];       %[cm], y axis in 3D quiver plot
-z_lim = [0 25];         %[cm], z axis in 3D quiver plot
+x_lim = [-10 30];       %[cm], x axis in 3D quiver plot
+y_lim = [-30 10];       %[cm], y axis in 3D quiver plot
+z_lim = [-5 5];         %[cm], z axis in 3D quiver plot
+view_1 = 15;            %viewing angle for 3D quiver plot
 
 set(gca,'XLim',x_lim,'YLim',y_lim,'ZLim',z_lim);
 

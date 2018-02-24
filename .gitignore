@@ -2,6 +2,9 @@
 *.autosave
 /slprj
 /results
-.mat
-.gitignore
-.avi
+parameters.mat
+*.gitignore
+*.avi
+*.eps
+*.fig
+*.png

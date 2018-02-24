@@ -72,8 +72,8 @@ if video_flag == 1          % Should change it so only displays to flag is on, a
     zlabel('Z [cm]');
 
     %plot X on xy plane
-    quiver3(-1000,-1000,0,5000,5000,0,'ShowArrowHead','Off','Color','k');
-    quiver3(-1000,1000,0,5000,-5000,0,'ShowArrowHead','Off','Color','k');
+%     quiver3(-1000,-1000,0,5000,5000,0,'ShowArrowHead','Off','Color','k');
+%     quiver3(-1000,1000,0,5000,-5000,0,'ShowArrowHead','Off','Color','k');
 
 
     for i=1:video_frame_frequency:length(X)
@@ -157,20 +157,20 @@ if video_flag == 1          % Should change it so only displays to flag is on, a
         delete(y_vec_global_neg_offset_1_head);
         delete(y_vec_global_neg_offset_2_head);
 
-        delete(x_vec_global_pos_xy_head);
-        delete(x_vec_global_neg_xy_head);
-        delete(y_vec_global_pos_xy_head);
-        delete(y_vec_global_neg_xy_head);
-
-        delete(x_vec_global_pos_xy_offset_1_head);
-        delete(x_vec_global_pos_xy_offset_2_head);
-        delete(x_vec_global_neg_xy_offset_1_head);
-        delete(x_vec_global_neg_xy_offset_2_head);
-
-        delete(y_vec_global_pos_xy_offset_1_head);
-        delete(y_vec_global_pos_xy_offset_2_head);
-        delete(y_vec_global_neg_xy_offset_1_head);
-        delete(y_vec_global_neg_xy_offset_2_head);
+%         delete(x_vec_global_pos_xy_head);
+%         delete(x_vec_global_neg_xy_head);
+%         delete(y_vec_global_pos_xy_head);
+%         delete(y_vec_global_neg_xy_head);
+% 
+%         delete(x_vec_global_pos_xy_offset_1_head);
+%         delete(x_vec_global_pos_xy_offset_2_head);
+%         delete(x_vec_global_neg_xy_offset_1_head);
+%         delete(x_vec_global_neg_xy_offset_2_head);
+% 
+%         delete(y_vec_global_pos_xy_offset_1_head);
+%         delete(y_vec_global_pos_xy_offset_2_head);
+%         delete(y_vec_global_neg_xy_offset_1_head);
+%         delete(y_vec_global_neg_xy_offset_2_head);
 
 
     end

@@ -14,7 +14,7 @@ set(0,'DefaultLineLineWidth',2)
 
 %% Basic and Physical Paramters
 g = 9.8;        % [m/s^2], acceleration of gravity
-m = 60e-6;      % [kg], body mass  Changed from 10e-6 9/5/2017    5-e-6 is with IMU + flexboard
+m = 67e-6;      % [kg], body mass  Changed from 10e-6 9/5/2017    5-e-6 is with IMU + flexboard
 lx = 1e-2;      % [m], x distance to body center of mass
 ly = 1e-2;      % [m], y distance to body center of mass
 lz = 20e-6;     % [m], z distance to body center of mass
@@ -193,6 +193,8 @@ M2 = ...     % [Thrustx; Thrusty; Thrustz; Tauz; Tauy; Taux;] = M * [F4; F3; F2;
      ly*cos(angle)     -ly*cos(angle)   -ly*cos(angle)   ly*cos(angle);];       % Taux
 
 
+FtoV = [ 7.22076994e-07 -8.70949206e-04 -5.13566754e-01]
+ 
 %% Matrices for PID contorllers translating PID output to force inputs
 M_z     = [1,1,1,1]';         % Translates PID of z direction uniformly across 4 thrusters
 M_roll  = [1,-1,-1,1]';    
@@ -206,15 +208,24 @@ M_pitch = -1*[1,1,-1,-1]';
 % view_1 = 15;            %viewing angle for 3D quiver plot, first parameter
 % view_2 = 46;            %viewing angle for 3D quiver plot, second parameter
 
-x_lim = [-10 30];       %[cm], x axis in 3D quiver plot
-y_lim = [-30 10];       %[cm], y axis in 3D quiver plot
-z_lim = [-5 5];         %[cm], z axis in 3D quiver plot
+x_lim = [-10 10];       %[cm], x axis in 3D quiver plot
+y_lim = [-10 10];       %[cm], y axis in 3D quiver plot
+z_lim = [-3 3];         %[cm], z axis in 3D quiver plot
 view_1 = 15;            %viewing angle for 3D quiver plot, first parameter
 view_2 = 46;            %viewing angle for 3D quiver plot, second parameter
 
+x_lim = [-20 5];       %[cm], x axis in 3D quiver plot
+y_lim = [-20 5];       %[cm], y axis in 3D quiver plot
+z_lim = [-3 3];         %[cm], z axis in 3D quiver plot
 
-video_frame_frequency = 330; % how many frame jumps per frame that is recorded in video 66 = 60fps
-sim_time = 1;          %[s], how long the simulation runs 
+% set(gca,'XLim',x_lim,'YLim',y_lim,'ZLim',z_lim);
+
+view_1 = 45-180;            %viewing angle for 3D quiver plot, first parameter (like yaw rotation of plot)
+view_2 = 15;            %viewing angle for 3D quiver plot, second parameter (roll of plot)
+
+% view(view_1,view_2);
+video_frame_frequency = 1000; % how many frame jumps per frame that is recorded in video 66 = 60fps
+sim_time = 2;          %[s], how long the simulation runs 
 video_flag = 0;         % set to 1 to record video, set to 0 otherwise
 
-save('parameters.mat');
+% save('parameters.mat');

@@ -9,3 +9,5 @@ parameters.mat
 *.fig
 *.png
 *.mat
+
+/iros2018_control_yaw_grt_rtw

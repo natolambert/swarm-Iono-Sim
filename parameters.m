@@ -173,7 +173,7 @@ M = ...     % [T; Tauz; Tauy; Taux;] = M * [F4; F3; F2; F1]
      lx lx -lx -lx;
      -ly ly  ly -ly;];
 
-angle = 0.01; 
+angle = 0.000; 
 
 % Ionocraft without XY thrusts - I think a couple of the +/-'s are off in
 % this one. See below
@@ -196,8 +196,8 @@ M2 = ...     % [Thrustx; Thrusty; Thrustz; Tauz; Tauy; Taux;] = M * [F4; F3; F2;
 FtoV = [ 7.22076994e-07 -8.70949206e-04 -5.13566754e-01];
 
 % process variation vector
-randomness = normrnd(1,.0025,4,1)
-disturb = 1*[0, 0, -1]
+randomness = normrnd(1,.0000025,4,1)
+disturb = 0*[0, 0, -1]
  
 %% Matrices for PID contorllers translating PID output to force inputs
 M_z     = [1,1,1,1]';         % Translates PID of z direction uniformly across 4 thrusters
@@ -218,18 +218,18 @@ z_lim = [-3 3];         %[cm], z axis in 3D quiver plot
 view_1 = 15;            %viewing angle for 3D quiver plot, first parameter
 view_2 = 46;            %viewing angle for 3D quiver plot, second parameter
 
-x_lim = [-20 5];       %[cm], x axis in 3D quiver plot
-y_lim = [-20 5];       %[cm], y axis in 3D quiver plot
-z_lim = [-3 3];         %[cm], z axis in 3D quiver plot
+x_lim = [-10 10];       %[cm], x axis in 3D quiver plot
+y_lim = [-10 10];       %[cm], y axis in 3D quiver plot
+z_lim = [-3 6];         %[cm], z axis in 3D quiver plot
 
 % set(gca,'XLim',x_lim,'YLim',y_lim,'ZLim',z_lim);
 
 view_1 = 45-180;            %viewing angle for 3D quiver plot, first parameter (like yaw rotation of plot)
-view_2 = 15;            %viewing angle for 3D quiver plot, second parameter (roll of plot)
+view_2 = 45;            %viewing angle for 3D quiver plot, second parameter (roll of plot)
 
 % view(view_1,view_2);
 video_frame_frequency = 1000; % how many frame jumps per frame that is recorded in video 66 = 60fps
 sim_time = 1;          %[s], how long the simulation runs 
-video_flag = 0;         % set to 1 to record video, set to 0 otherwise
+video_flag = 1;         % set to 1 to record video, set to 0 otherwise
 
 % save('parameters.mat');

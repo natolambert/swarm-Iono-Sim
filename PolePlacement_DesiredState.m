@@ -27,10 +27,6 @@ equil_Z = 0.0;      %[m], equilibrium Z;
 equil_yaw = 0 * pi/180; %[rad], equilibrium yaw;
 % ------------------------------------------------------------------------------------------
 
-% Ionocraft tilt
-angle = .1; % .1 rad = 5.73deg
-
-
 %Ionocraft Mass and gravity
 quad = struct('g',g,'M',m);
 
